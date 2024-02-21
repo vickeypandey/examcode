@@ -1,0 +1,42 @@
+// Function Overloading
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class A{
+    double ar;
+    public:
+    void Area(int);  //Area of square
+    void Area(double);  //Area of circle
+    void Area(int,int);  //Area of rectangle
+    void disp();
+};
+
+void A::Area(int a){
+    ar = a*a;
+}
+
+void A::Area(double r){
+    ar = 3.14*r*r;
+    
+}
+
+void A::Area(int l,int b){
+    ar = l*b;
+}
+
+void A::disp(){
+    cout<<"Area = "<<ar<<endl;
+}
+
+int main(){
+    A ob;
+    ob.Area(4);  //Area of square
+    ob.disp();
+    ob.Area(7.0);   //Area of circle
+    ob.disp();
+    ob.Area(2,3);   //Area of rectangle
+    ob.disp();
+    getch();
+    return 0; 
+}
