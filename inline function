@@ -1,0 +1,26 @@
+// use of scope resolution operator for making inline function
+#include<iostream>
+using namespace std;
+
+class A{
+    int num;
+    public:
+    void disp();
+    void get();
+};
+
+inline void A::get(){
+        cout<<"Enter a number: "<<endl;
+        cin>>num;
+    }
+inline void A::disp(){
+        cout<<"the number= "<<num<<endl;
+    }
+
+
+int main(){
+    A ob;
+    ob.get();
+    ob.disp();
+    return(0);
+}
