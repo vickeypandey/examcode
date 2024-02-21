@@ -1,0 +1,30 @@
+//Uniary operator overloading using member function
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class A{
+    int x,y,z;
+    public:
+    A(){
+        cout<<"Enter any three number: "<<endl;
+        cin>>x>>y>>z;
+    }
+    void operator -(){
+        x=-x;
+        y=-y;
+        z=-z;
+    }
+    disp(){
+        cout<<"X = "<<x<<" Y = "<<y<<" Z = "<<z<<endl;
+    }
+};
+
+int main(){
+    A ob;
+    ob.disp();
+    -ob;
+    ob.disp();
+    getch();
+    return 0;
+}
