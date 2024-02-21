@@ -1,0 +1,24 @@
+// Nesting of member function
+#include<iostream>
+using namespace std;
+
+class A{
+    int x,y;
+
+    void get(){
+        cout<<"Enter two numbers: "<<endl;
+        cin>>x>>y;
+    }
+    
+    public:
+    void disp(){
+        get();
+        cout<<"x= "<<x<<" y= "<<y<<endl;
+    }
+};
+
+int main(){
+    A ob;
+    ob.disp();
+    return(0);
+}
