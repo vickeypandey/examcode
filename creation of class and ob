@@ -1,0 +1,23 @@
+// Creation of class and object
+#include<iostream>
+using namespace std;
+
+class A{
+    int num;
+    public:
+    void get(){
+        cout<<"Enter any number: "<<endl;
+        cin>>num;
+    }
+    void disp(){
+        cout<<"Number = "<<num<<endl;
+    }
+};
+
+int main(){
+    A ob;
+    ob.get();
+    ob.disp();
+    return(0);
+}
+
