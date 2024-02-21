@@ -1,0 +1,39 @@
+//Constructor Overloading
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class A{
+    int x,y;
+    public:
+    A(){  //default constructor
+        x=100;
+        y=200;
+    }
+    A(int p){   //one argument constructor
+        x=y=p;
+    }
+    A(int p,int q){   //parameterized constructor
+        x=p;
+        y=q;
+    }
+    A(A &ob){    //copy constructor
+        x=ob.x;
+        y=ob.y;
+    }
+    void disp(){
+        cout<<"X = "<<x<<" Y = "<<y<<endl;
+    }
+};
+
+int main(){
+    A ob;  //default constructor
+    A ob1(120);  //one argument 
+    A ob2(50,60);  //parameterized
+    A ob3(ob2);   //copy constructor
+    ob.disp();
+    ob1.disp();
+    ob2.disp();
+    ob3.disp();
+    getch();
+}
