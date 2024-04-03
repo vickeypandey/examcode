@@ -1,0 +1,44 @@
+// function acting as a member of one class and friend of another
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class B;
+class A
+{
+	int r,s ;
+	public: 
+	void getrs()
+	{ 
+	cout<<"enter any two number "<<endl;
+	cin>>r>>s;
+	}
+	void add(B ob1);
+};
+class B
+{
+	int p, q;
+	public:
+		void getpq()
+		{
+			cout<<"enter any two number"<<endl;
+			cin>>p,q;
+		}
+		friend void A :: add(B ob1);
+};
+void Y:: add(B ob1)
+{
+	int a,b;
+	a=r*ob1.p;
+	b=s*ob1.q;
+	cout<<"added vlue is --"<<(a+b)<<endl;
+}
+int main()
+{
+	B ob;
+	A ob3;
+	clrscr();
+	ob.getpq();
+	ob3.getrs();
+	ob3.add(ob);
+	getch();
+}
