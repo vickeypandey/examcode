@@ -1,0 +1,48 @@
+#include<iostream>
+#include<conio.h>
+ using namespace std;
+
+class A
+{
+	int x ,y;
+	public:
+		void get()
+		{
+			cout<<"enter any two number"<<endl;
+			cin>>x>>y;
+		}
+		void disp()
+		{
+			cout<<"X ="<<x <<"Y= "<<y<<endl;
+			
+		}
+};
+ class B : public A
+ {
+ 	int p, q;
+ 	public:
+ 			void get1()
+		{
+			cout<<"enter any two number"<<endl;
+			cin>>p>>q;
+		}
+		void disp1()
+		{
+			cout<<"P ="<<p <<"Q= "<<q<<endl;
+			
+		}
+ 		
+ };
+  
+  int main()
+  {
+  	B ob;
+  	ob.get();
+  	ob.get1();
+  	ob.disp();
+  	ob.disp1();
+  	getch();
+  	return 0;
+  }
+ 
+ 
