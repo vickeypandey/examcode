@@ -1,0 +1,26 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int NOC,NOA;
+class A {
+    public:
+    A(){
+        NOC++;
+        NOA++;
+        cout<<"number of objects created: "<<NOC<<endl;
+        cout<<"number of objects alive: "<<NOA<<endl;
+    }
+    ~A(){
+        NOA--;
+        cout<<"number of objects alive: "<<NOA<<endl;
+    }
+};
+int main(){
+    
+    A ob1,ob2,ob3;
+    { 
+        A ob4,ob5;
+    }
+    getch();
+    return 0;
+}
