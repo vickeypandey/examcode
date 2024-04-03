@@ -1,0 +1,43 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class B;
+class A
+{
+	int x ,y;
+	public:
+		void get()
+		{
+			cout<<"enter x and y"<<endl;
+			cin>>x>>y;
+		}
+		friend void add(A ob, B ob1);
+		
+};
+class B
+{
+	int p,q;
+	public:
+		void get1()
+		{
+			cout<<"enter r and s "<<endl;
+			cin>>p>>q;
+		}
+		friend void add(A ob, B ob1);
+};
+	 void add(A ob , B ob1)
+	 {
+	 	int r;
+	 	r=ob.x +ob.y+ ob1.p+ob1.q;
+	 	cout<<"added values are "<<r<<endl;
+	 }
+	 int main()
+	 {
+	 	A ob;
+	 	B ob1;
+	 	ob.get();
+	 	ob1.get1();
+	 	add(ob, ob1);
+	 	getch();
+	 }
+	 
