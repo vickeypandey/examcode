@@ -1,0 +1,28 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+ class A
+ {
+ 	int x,y;
+ 	public:
+ 		void get()
+ 		{
+ 			cout<<"enter two no.s "<<endl;
+ 			cin>>x>>y;
+		 }
+		 friend void add(A ob)
+		 {
+		 	int r,s;
+		 	r=ob.x;
+		 	s=ob.y;
+		 	cout<<"added value="<<r+s<<endl;
+		 }
+ };
+ int main()
+ {
+ 	A ob;
+ 	ob.get();
+ 	add(ob);
+ 	getch();
+ 	return 0;
+ }
