@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+class Complex {
+private:
+    double real;
+    double imaginary;
+
+public:
+    // Default constructor
+    Complex() : real(0.0), imaginary(0.0) {}
+
+    // Parameterized constructor
+    Complex(double _real, double _imaginary) : real(_real), imaginary(_imaginary) {}
+
+    // Copy constructor
+    Complex(const Complex& other) : real(other.real), imaginary(other.imaginary) {}
+
+    // Display method
+    void display() {
+        cout << "Complex Number: " << real << " + " << imaginary << "i" << endl;
+    }
+};
+
+int main() {
+    // Using default constructor
+    Complex defaultComplex;
+    cout << "Default Complex Number:" << endl;
+    defaultComplex.display();
+
+    // Using parameterized constructor
+    Complex customComplex(2.5, -3.7);
+    cout << "\nCustom Complex Number:" << endl;
+    customComplex.display();
+
+    // Using copy constructor
+    Complex copiedComplex(customComplex);
+    cout << "\nCopied Complex Number:" << endl;
+    copiedComplex.display();
+
+    return 0;
+}
