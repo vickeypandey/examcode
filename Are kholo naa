@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+class Time {
+private:
+    int hours;
+    int minutes;
+    int seconds;
+
+public:
+    // Default constructor
+    Time() : hours(0), minutes(0), seconds(0) {}
+
+    // Parameterized constructor
+    Time(int _hours, int _minutes, int _seconds) : hours(_hours), minutes(_minutes), seconds(_seconds) {}
+
+    // Copy constructor
+    Time(const Time& other) : hours(other.hours), minutes(other.minutes), seconds(other.seconds) {}
+
+    // Display method
+    void display() {
+        cout << "Time: " << hours << " hours, " << minutes << " minutes, " << seconds << " seconds" << endl;
+    }
+};
+
+int main() {
+    // Using default constructor
+    Time defaultTime;
+    cout << "Default Time:" << endl;
+    defaultTime.display();
+
+    // Using parameterized constructor
+    Time customTime(5, 30, 45);
+    cout << "\nCustom Time:" << endl;
+    customTime.display();
+
+    // Using copy constructor
+    Time copiedTime(customTime);
+    cout << "\nCopied Time:" << endl;
+    copiedTime.display();
+
+    return 0;
+}
